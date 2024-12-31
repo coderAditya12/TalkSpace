@@ -56,7 +56,23 @@ const signIn = async (req, res, next) => {
       })
       .json(userObj);
   } catch (error) {
-    next(error)
+    next(error);
   }
 };
-module.exports = { signUp,signIn };
+
+const signOut = (req, res, next) => {
+  try {
+    req.logout((err) => {
+      if (err) {
+        return next(errorHandler(res, 500, "Error logging out"));
+      }
+      req.session.destroy();
+      res.clearCookie("access_token");
+      res.clearCookie("connect.sid");
+      res.status(200).json("Logged out successfully");
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+module.exports = { signUp, signIn, signOut };
