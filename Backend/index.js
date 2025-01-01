@@ -7,6 +7,8 @@ const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const connectPassport = require("./utils/provider");
 const session = require("express-session");
+const cors = require('cors')
+
 dotenv.config();
 
 mongoose
@@ -17,6 +19,10 @@ mongoose
   .catch((err) => {
     console.log("error connecting to database", err);
   });
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
 
 app.use(
   session({

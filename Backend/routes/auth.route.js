@@ -2,7 +2,6 @@ const express = require("express");
 const route = express.Router();
 const { signUp, signIn, signOut } = require("../controller/auth.controller");
 const passport = require("passport");
-const { sign } = require("jsonwebtoken");
 route.post("/signup", signUp);
 route.post("/signin", signIn);
 route.get(
