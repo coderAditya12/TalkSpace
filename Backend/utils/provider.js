@@ -5,11 +5,13 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 const connectPassport = () => {
+  console.log(process.env.GOOGLE_CLIENT_ID);
+  console.log(process.env.GOOGLE_CLIENT_SECRET);
   passport.use(
     new GoogleStrategy(
       {
-        clientID: process.env.clientID,
-        clientSecret: process.env.clientSecret,
+        clientID: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         callbackURL: "http://localhost:1111/api/auth/loggedin",
       },
       async (accessToken, refreshToken, profile, done) => {
