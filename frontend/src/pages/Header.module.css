@@ -1,0 +1,153 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  /* background: rgba(10, 10, 10, 0.95); */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(20, 222, 124, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    rgb(20, 222, 124) 0%,
+    rgb(30, 158, 113) 50%,
+    rgb(49, 30, 92) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(20, 222, 124, 0.2);
+  transition: text-shadow 0.3s ease;
+}
+
+.logo:hover {
+  text-shadow: 0 2px 15px rgba(20, 222, 124, 0.4);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  position: relative;
+}
+
+.navLinks a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.navLinks a:hover {
+  color: rgb(20, 222, 124);
+  background: rgba(20, 222, 124, 0.1);
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(20, 222, 124), rgb(49, 30, 92));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navLinks a:hover::after {
+  width: 80%;
+}
+
+.logoutButton {
+  background: linear-gradient(
+    45deg,
+    rgba(20, 222, 124, 0.1) 0%,
+    rgba(49, 30, 92, 0.1) 100%
+  );
+  border: 1px solid rgb(20, 222, 124);
+  color: rgb(20, 222, 124);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(20, 222, 124, 0.2) 0%,
+    rgba(49, 30, 92, 0.2) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 222, 124, 0.15);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .navLinks a,
+  .logoutButton {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navLinks {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    width: 70%;
+    height: calc(100vh - 70px);
+    transition: right 0.3s ease;
+    border-left: 1px solid rgba(20, 222, 124, 0.1);
+  }
+
+  .navLinks.active {
+    right: 0;
+  }
+
+  .navLinks li {
+    width: 100%;
+  }
+
+  .navLinks a,
+  .logoutButton {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

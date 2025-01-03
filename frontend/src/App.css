@@ -1,0 +1,7 @@
+.my-custom-button {
+  background-color: rgb(35, 126, 108);
+}
+
+.my-custom-button:hover {
+  background-color: rgb(44, 62, 97);
+}
