@@ -1,0 +1,358 @@
+html,
+body,
+#root {
+  width: 100%;
+}
+
+.background {
+  height: 100vh;
+  background-image: linear-gradient(
+    45deg,
+    rgb(20, 222, 124) 0%,
+    rgb(20, 222, 124) 21%,
+    rgb(25, 190, 119) 21%,
+    rgb(25, 190, 119) 37%,
+    rgb(30, 158, 113) 37%,
+    rgb(30, 158, 113) 46%,
+    rgb(35, 126, 108) 46%,
+    rgb(35, 126, 108) 53%,
+    rgb(39, 94, 103) 53%,
+    rgb(39, 94, 103) 59%,
+    rgb(44, 62, 97) 59%,
+    rgb(44, 62, 97) 77%,
+    rgb(49, 30, 92) 77%,
+    rgb(49, 30, 92) 100%
+  );
+}
+
+.background:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background: #ffffff2a;
+}
+
+.SignupDiv {
+  /* background-imag  e: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3rem);
+}
+
+.loginDiv {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3rem);
+}
+
+.loginDiv .logo {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #00000000;
+}
+
+.signUp {
+  transition: 0.2s ease-in border-radius, width 0.1s ease-out;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  align-items: center;
+  padding: 2rem;
+  height: 40rem;
+  justify-content: space-evenly;
+  background-image: linear-gradient(
+    45deg,
+    rgb(20, 222, 124) 0%,
+    rgb(20, 222, 124) 21%,
+    rgb(25, 190, 119) 21%,
+    rgb(25, 190, 119) 37%,
+    rgb(30, 158, 113) 37%,
+    rgb(30, 158, 113) 46%,
+    rgb(35, 126, 108) 46%,
+    rgb(35, 126, 108) 53%,
+    rgb(39, 94, 103) 53%,
+    rgb(39, 94, 103) 59%,
+    rgb(44, 62, 97) 59%,
+    rgb(44, 62, 97) 77%,
+    rgb(49, 30, 92) 77%,
+    rgb(49, 30, 92) 100%
+  );
+  box-shadow: 0 1rem 2rem #00000079;
+  border-radius: 1rem;
+}
+.loginDiv .signUp {
+  background-image: linear-gradient(225deg, #aee2a9 0%, #d2d4c3 48%, #aee2a9 100%);
+  height: 30rem;
+  padding: 1rem;
+}
+
+.loginDiv .logo {
+  background-image: linear-gradient(
+    45deg,
+    rgb(20, 222, 124) 0%,
+    rgb(20, 222, 124) 21%,
+    rgb(25, 190, 119) 21%,
+    rgb(25, 190, 119) 37%,
+    rgb(30, 158, 113) 37%,
+    rgb(30, 158, 113) 46%,
+    rgb(35, 126, 108) 46%,
+    rgb(35, 126, 108) 53%,
+    rgb(39, 94, 103) 53%,
+    rgb(39, 94, 103) 59%,
+    rgb(44, 62, 97) 59%,
+    rgb(44, 62, 97) 77%,
+    rgb(49, 30, 92) 77%,
+    rgb(49, 30, 92) 100%
+  );
+  font-size: 2rem;
+  font-weight: 800;
+  align-self: center;
+  /* color: rgb(184, 218, 181); */
+  font-family: "Quicksand", "serif";
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+  line-height: 2rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #00000000;
+  /* border: 0.3rem solid rgb(184, 218, 181); */
+}
+
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  align-self: center;
+  color: rgb(184, 218, 181);
+  font-family: "Quicksand", "serif";
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+  line-height: 2rem;
+}
+
+.loginDiv .subHead {
+  background-image: linear-gradient(
+    45deg,
+    rgb(20, 222, 124) 0%,
+    rgb(20, 222, 124) 21%,
+    rgb(25, 190, 119) 21%,
+    rgb(25, 190, 119) 37%,
+    rgb(30, 158, 113) 37%,
+    rgb(30, 158, 113) 46%,
+    rgb(35, 126, 108) 46%,
+    rgb(35, 126, 108) 53%,
+    rgb(39, 94, 103) 53%,
+    rgb(39, 94, 103) 59%,
+    rgb(44, 62, 97) 59%,
+    rgb(44, 62, 97) 77%,
+    rgb(49, 30, 92) 77%,
+    rgb(49, 30, 92) 100%
+  );
+  background-clip: text;
+  color: #00000000;
+  -webkit-background-clip: text;
+}
+
+.formLabel {
+  flex: 1rem 0 1;
+  font-family: "Montserrat", "serif";
+  padding: 0.3rem 0.4rem;
+}
+
+.subHead {
+  font-family: "Ysabeau SC", serif;
+  font-optical-sizing: auto;
+  color: rgb(184, 218, 181);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.subhead {
+  color: rgb(30, 26, 85);
+}
+.loginDiv .formLabel:hover {
+  color: rgb(30, 26, 85);
+}
+
+.signuplink {
+  color: rgb(184, 218, 181);
+  padding-left: 0.4rem;
+}
+
+.signuplink:hover {
+  text-decoration: underline;
+}
+.oLink {
+  transition: 0.1s ease;
+}
+.oLink:hover {
+  scale: 1.1;
+}
+.headings {
+  display: flex;
+  flex: 20% 0 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.formGroup {
+  position: relative;
+  z-index: 0;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-block: 1.5rem;
+}
+
+.input {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  background: #00000000;
+  border: 0.1rem solid rgb(30, 26, 85);
+  color: rgb(30, 26, 85);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.input:focus,
+.input:valid {
+  border: 0.1rem solid rgb(30, 26, 85);
+  outline: none;
+  color: rgb(179, 255, 172);
+}
+.input:not(:focus):not(:valid) {
+  color: rgb(202, 80, 80);
+}
+
+.input:active .input:focus {
+  border: 0.1rem solid rgb(179, 255, 172);
+  box-shadow: 0 0 1rem rgba(184, 218, 181, 0.418);
+}
+
+.oauthDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formLabel {
+  position: absolute;
+  z-index: 1;
+  backdrop-filter: blur(1rem);
+  line-height: 1rem;
+  transform: translateY(30%);
+  border-radius: 4rem;
+  left: 0.4rem;
+  transition: 0.2s ease;
+}
+.input:active + .formLabel,
+.input:focus + .formLabel,
+.input:valid + .formLabel {
+  transform: translate(-0.9rem, -2rem);
+  line-height: 25px;
+  height: 25px;
+  scale: 0.88;
+  color: rgb(179, 255, 172);
+  backdrop-filter: none;
+}
+.loginDiv .input:active + .formLabel,
+.loginDiv .input:focus + .formLabel,
+.loginDiv .input:valid + .formLabel {
+  transform: translate(-0.9rem, -2rem);
+  line-height: 25px;
+  height: 25px;
+  scale: 0.88;
+  color: rgb(30, 26, 85);
+  backdrop-filter: none;
+}
+.loginDiv .input {
+  color: rgb(30, 26, 85);
+}
+
+.loginDiv .submit {
+  border-color: rgb(30, 26, 85);
+  color: rgb(30, 26, 85);
+}
+
+.loginDiv .submit:hover {
+  background: rgb(25, 190, 119);
+  box-shadow: 0 0 1rem rgb(30, 26, 85);
+}
+
+.oauth {
+  background: rgb(229, 255, 226);
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-block: 0.5rem;
+  border-radius: 3rem;
+}
+.loginDiv .formGroup {
+  margin-block: 1rem;
+}
+
+.loginDiv .signuplink {
+  color: rgb(30, 26, 85);
+}
+.oauth a {
+  display: flex;
+  flex: 1.5rem 0 0;
+}
+
+.submit {
+  color: rgb(179, 255, 172);
+  border: solid 0.1rem rgb(179, 255, 172);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: "Quicksand", "serif";
+  margin-top: 1rem;
+  display: flex;
+  /* gap: 0.5rem; */
+  align-items: center;
+}
+
+.arrow {
+  width: 1rem;
+  color: rgb(179, 255, 172);
+}
+
+.arrow i::before {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.fg2 {
+  margin-block: 0.3rem;
+}
+.submit:hover {
+  background: rgb(179, 255, 172);
+  color: rgb(30, 26, 85);
+  box-shadow: 0 0 1rem rgb(184, 218, 181);
+}
+
+.submit:active {
+  background: grey;
+  border-color: grey;
+  color: rgb(179, 255, 172);
+}
+
+@media screen and (max-width: 798px) {
+  html {
+    font-size: 88%;
+  }
+  .signUp {
+    margin-inline: 1rem;
+  }
+}
